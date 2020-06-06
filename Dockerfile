@@ -19,4 +19,5 @@ RUN apt-get install --yes \
                        python-pip \
                        python3-pip
 RUN apt -y autoremove  && updatedb
+RUN pip3 install pwn crypto selenium fabric
 ENTRYPOINT ["/bin/bash"]
