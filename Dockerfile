@@ -1,17 +1,22 @@
 FROM kalilinux/kali-rolling
 LABEL MAINTAINER="traxplayer@gmail.com"
-RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y metasploit-framework tmux \
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get upgrade --yes --force-yes
+RUN apt-get install --yes metasploit-framework tmux
+RUN apt-get install --yes \
                        kali-tools-passwords \
                        kali-tools-reverse-engineering \
-                       kali-tools-exploitation \
+                       kali-tools-exploitation
+RUN apt-get install --yes \
                        kali-tools-post-exploitation \
-                       kali-tools-forensics \
-                       kali-tools-information-gathering \
+                       kali-tools-forensics
+RUN apt-get install --yes \
+                       kali-tools-information-gathering
+RUN apt-get install --yes \
                        gobuster \
-                       mlocate \
+                       mlocate
+RUN apt-get install --yes \
                        python-pip \
-                       python3-pip && \
-    apt -y autoremove && \
-    updatedb            
+                       python3-pip
+RUN apt -y autoremove  && updatedb
 ENTRYPOINT ["/bin/bash"]
