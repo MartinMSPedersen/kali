@@ -1,12 +1,15 @@
 FROM kalilinux/kali-linux-docker
 LABEL MAINTAINER="traxplayer@gmail.com"
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y metasploit-framework tmux \
+RUN apt-get update && apt-get upgrade -y &&
+    apt-get install -y metasploit-framework tmux \
                        kali-tools-passwords \
                        kali-tools-reverse-engineering \
                        kali-tools-exploitation \
                        kali-tools-post-exploitation \
                        kali-tools-forensics \
-                       kali-tools-information-gathering
-RUN apt -y autoremove
+                       kali-tools-information-gathering \
+                       gobuster \
+                       mlocate &&
+    apt -y autoremove &&
+    updatedb
 ENTRYPOINT ["/bin/bash"]
