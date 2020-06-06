@@ -1,6 +1,6 @@
-FROM kalilinux/kali-linux-docker
+FROM kalilinux/kali-rolling
 LABEL MAINTAINER="traxplayer@gmail.com"
-RUN apt-get update && apt-get upgrade -y &&
+RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y metasploit-framework tmux \
                        kali-tools-passwords \
                        kali-tools-reverse-engineering \
@@ -11,7 +11,7 @@ RUN apt-get update && apt-get upgrade -y &&
                        gobuster \
                        mlocate \
                        python-pip \
-                       python3-pip
-    apt -y autoremove &&
+                       python3-pip && \
+    apt -y autoremove && \
     updatedb            
 ENTRYPOINT ["/bin/bash"]
