@@ -9,7 +9,9 @@ RUN apt-get update && apt-get upgrade -y &&
                        kali-tools-forensics \
                        kali-tools-information-gathering \
                        gobuster \
-                       mlocate &&
+                       mlocate \
+                       python-pip \
+                       python3-pip
     apt -y autoremove &&
-    updatedb
+    updatedb            
 ENTRYPOINT ["/bin/bash"]
