@@ -17,7 +17,10 @@ RUN apt-get install --yes \
                        mlocate
 RUN apt-get install --yes \
                        python-pip \
-                       python3-pip
+                       python3-pip \
+											 python-tk
 RUN apt -y autoremove  && updatedb
 RUN pip3 install pwn crypto selenium fabric
+RUN updatedb
+
 ENTRYPOINT ["/bin/bash"]
