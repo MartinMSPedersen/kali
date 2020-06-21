@@ -21,7 +21,7 @@ RUN apt-get install --yes \
    		       python-tk
 RUN apt -y autoremove  && updatedb
 RUN pip3 install pwn crypto selenium fabric
-RUN apt-get install --yes libimage-exiftool-perl
+RUN apt-get install --yes libimage-exiftool-perl dirb
 RUN updatedb
 
 ENTRYPOINT ["/bin/bash"]
