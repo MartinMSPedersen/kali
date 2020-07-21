@@ -24,7 +24,7 @@ RUN pip3 install pwn crypto selenium fabric
 RUN apt-get install --yes libimage-exiftool-perl dirb mc
 #RUN apt-get install openvas && openvas-setup
 RUN apt-get install hashcash
-RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/wordlists/rockyou.txt /rockyou.txt
+#RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/wordlists/rockyou.txt /rockyou.txt
 
 RUN apt -y autoremove  && updatedb
 RUN updatedb
