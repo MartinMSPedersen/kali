@@ -1,7 +1,7 @@
 FROM kalilinux/kali-rolling
 LABEL MAINTAINER="traxplayer@gmail.com"
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get upgrade --yes --force-yes
+RUN apt-get update
 RUN apt-get install --yes metasploit-framework tmux
 RUN apt-get install --yes \
                        kali-tools-passwords \
@@ -23,9 +23,10 @@ RUN apt -y autoremove  && updatedb
 RUN pip3 install pwn crypto selenium fabric
 RUN apt-get install --yes libimage-exiftool-perl dirb mc
 #RUN apt-get install openvas && openvas-setup
-RUN apt-get install hashcash
+RUN apt-get install hashcash sublist3r vim
 #RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/wordlists/rockyou.txt /rockyou.txt
 
+RUN apt-get upgrade --yes --force-yes
 RUN apt -y autoremove  && updatedb
 RUN updatedb
 
