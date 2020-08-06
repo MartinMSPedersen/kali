@@ -23,7 +23,7 @@ RUN apt -y autoremove  && updatedb
 RUN pip3 install pwn crypto selenium fabric
 RUN apt-get install --yes libimage-exiftool-perl dirb mc
 #RUN apt-get install openvas && openvas-setup
-RUN apt-get install hashcash sublist3r vim
+RUN apt-get install --yes hashcash sublist3r vim vim-scripts ctags vim-doc
 #RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/wordlists/rockyou.txt /rockyou.txt
 
 RUN apt-get upgrade --yes --force-yes
