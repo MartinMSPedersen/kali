@@ -31,7 +31,9 @@ RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/word
 RUN apt-get upgrade --yes --force-yes
 RUN apt-get install whois
 RUN apt -y autoremove
-RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/wordlists/rockyou.txt /rockyou.txt
+
+#This fails for some reason?
+#RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/wordlists/rockyou.txt /rockyou.txt
 RUN updatedb
 
 ENTRYPOINT ["/bin/bash"]
