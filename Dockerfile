@@ -30,6 +30,8 @@ RUN apt-get install --yes hashcash sublist3r vim vim-scripts ctags vim-doc
 RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/wordlists/rockyou.txt /rockyou.txt
 RUN apt-get upgrade --yes --force-yes
 RUN apt-get install whois
+RUN wget -o /usr/local/bin/linpeas.sh https://raw.githubusercontent.com/carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh
+
 RUN apt -y autoremove
 
 #This fails for some reason?
