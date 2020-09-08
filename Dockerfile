@@ -26,7 +26,7 @@ RUN apt-get install --yes libimage-exiftool-perl dirb mc vim-common vim-doc vim-
 #RUN apt-get install openvas && openvas-setup
 RUN apt-get install hashcash
 RUN nmap --script-updatedb
-RUN apt-get install --yes hashcash sublist3r vim vim-scripts ctags vim-doc
+RUN apt-get install --yes hashcash sublist3r vim vim-scripts universal-ctags vim-doc
 RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/wordlists/rockyou.txt /rockyou.txt
 RUN apt-get upgrade --yes --force-yes
 RUN apt-get install whois
