@@ -30,8 +30,15 @@ RUN apt-get install --yes hashcash sublist3r vim vim-scripts ctags vim-doc
 RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/wordlists/rockyou.txt /rockyou.txt
 RUN apt-get upgrade --yes --force-yes
 RUN apt-get install whois
+
+# Linux Privilege Escalation Awesome Script
 RUN wget -O /usr/local/bin/linpeas.sh https://raw.githubusercontent.com/carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh && \
     chmod +x /usr/local/bin/linpeas.sh
+    
+# Rustscan - a faster nmap
+RUN wget -O /tmp/rustscan.deb https://github.com/RustScan/RustScan/releases/download/1.8.0/rustscan_1.8.0_amd64.deb && 
+    dpkg -i /tmp/rustscan.deb &&
+    rm /tmp/rustscan.deb
 
 RUN apt -y autoremove
 
