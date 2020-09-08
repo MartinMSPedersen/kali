@@ -36,8 +36,8 @@ RUN wget -O /usr/local/bin/linpeas.sh https://raw.githubusercontent.com/carlospo
     chmod +x /usr/local/bin/linpeas.sh
     
 # Rustscan - a faster nmap
-RUN wget -O /tmp/rustscan.deb https://github.com/RustScan/RustScan/releases/download/1.8.0/rustscan_1.8.0_amd64.deb && 
-    dpkg -i /tmp/rustscan.deb &&
+RUN wget -O /tmp/rustscan.deb https://github.com/RustScan/RustScan/releases/download/1.8.0/rustscan_1.8.0_amd64.deb && \ 
+    dpkg -i /tmp/rustscan.deb && \
     rm /tmp/rustscan.deb
 
 RUN apt -y autoremove
