@@ -17,7 +17,6 @@ RUN apt-get install --yes \
                        gobuster \
                        mlocate
 RUN apt-get install --yes \
-                       python-pip \
                        python3-pip \
    		       python-tk
 RUN apt -y autoremove  && updatedb
