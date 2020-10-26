@@ -36,7 +36,6 @@ RUN wget -O /usr/local/bin/linpeas.sh https://raw.githubusercontent.com/carlospo
     
 RUN apt -y autoremove && updatedb
 
-#This fails for some reason?
 RUN ln -s /usr/share/wordlists/rockyou.txt.gz /
 
 ENTRYPOINT ["/bin/bash"]
