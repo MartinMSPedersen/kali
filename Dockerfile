@@ -28,7 +28,7 @@ RUN nmap --script-updatedb
 RUN apt-get install --yes hashcash sublist3r vim vim-scripts universal-ctags vim-doc
 RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/wordlists/rockyou.txt /rockyou.txt
 RUN apt-get upgrade --yes --force-yes
-RUN apt-get install whois wfuzz
+RUN apt-get install whois wfuzz qpdf
 
 # Linux Privilege Escalation Awesome Script
 RUN wget -O /usr/local/bin/linpeas.sh https://raw.githubusercontent.com/carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh && \
@@ -37,6 +37,6 @@ RUN wget -O /usr/local/bin/linpeas.sh https://raw.githubusercontent.com/carlospo
 RUN apt -y autoremove && updatedb
 
 #This fails for some reason?
-#RUN /usr/bin/gunzip /usr/share/wordlists/rockyou.txt.gz && ln -s /usr/share/wordlists/rockyou.txt /rockyou.txt
+RUN ln -s /usr/share/wordlists/rockyou.txt.gz /
 
 ENTRYPOINT ["/bin/bash"]
