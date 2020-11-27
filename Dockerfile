@@ -6,7 +6,7 @@ RUN apt-get install --yes apt-utils
 RUN apt-get install --yes metasploit-framework \
                        kali-tools-passwords \
                        kali-tools-reverse-engineering \
-                       kali-tools-exploitation
+                       kali-tools-exploitation \
                        kali-tools-post-exploitation \
                        kali-tools-forensics \
                        kali-tools-information-gathering \
