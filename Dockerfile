@@ -13,7 +13,7 @@ RUN apt-get install --yes metasploit-framework \
                        gobuster \
                        mlocate \
                        python3-pip \
-   		                 python-tk
+                       python-tk \
                        libimage-exiftool-perl \
                        dirb \
                        mc \
