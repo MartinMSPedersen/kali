@@ -17,7 +17,7 @@ RUN apt-get install --yes metasploit-framework \
                        libimage-exiftool-perl \
                        dirb \
                        mc \
-                       vim univeral-ctags vim-common vim-doc vim-scripts vim-doc \
+                       vim vim-common vim-doc vim-scripts vim-doc \
                        whois \
                        wfuzz \
                        qpdf \
