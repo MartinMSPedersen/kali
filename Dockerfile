@@ -23,7 +23,6 @@ RUN apt-get install --yes metasploit-framework \
                        qpdf \
                        tmux \
                        hashcash \ 
-                       pdftk \
                        sublist3r
 RUN pip3 install pwn crypto selenium fabric
 RUN nmap --script-updatedb
