@@ -23,7 +23,8 @@ RUN apt-get install --yes metasploit-framework \
                        qpdf \
                        tmux \
                        hashcash \ 
-                       sublist3r
+                       sublist3r \
+											 bind9-dnsutils
 RUN pip3 install pwn crypto selenium fabric
 RUN nmap --script-updatedb
 RUN ln -s /usr/share/wordlists/rockyou.txt.gz /rockyou.txt.gz
