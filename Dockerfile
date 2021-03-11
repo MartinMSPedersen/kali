@@ -29,6 +29,7 @@ RUN pip3 install pwn crypto selenium fabric
 RUN nmap --script-updatedb
 RUN ln -s /usr/share/wordlists/rockyou.txt.gz /rockyou.txt.gz
 RUN wget https://github.com/n00py/WPForce/archive/master.zip && unzip master.zip && rm master.zip
+RUN apt install --yes iputils-ping telnet
 RUN apt -y autoremove && updatedb
 
 ENTRYPOINT ["/bin/bash"]
