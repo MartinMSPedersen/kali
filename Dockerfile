@@ -35,7 +35,7 @@ RUN apt-get install --yes iputils-ping telnet bloodhound
 
 RUN searchsploit -u || true # 2GB
 
-RUN apt-get install --yes steghide
+RUN apt-get install --yes steghide zbar-tools
 
 RUN apt-get -y autoremove && updatedb
 
