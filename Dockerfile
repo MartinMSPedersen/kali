@@ -36,6 +36,7 @@ RUN apt-get install --yes iputils-ping telnet bloodhound
 RUN searchsploit -u || true # 2GB
 
 RUN apt-get install --yes steghide zbar-tools
+RUN wget -O /usr/local/bin/LinEnum.sh https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 
 RUN apt-get -y autoremove && updatedb
 
