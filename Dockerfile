@@ -39,5 +39,6 @@ RUN apt-get install --yes steghide zbar-tools
 RUN wget -O /usr/local/bin/LinEnum.sh https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 
 RUN apt-get -y autoremove && updatedb
+# https://github.com/internetwache/GitTools/archive/refs/heads/master.zip
 
 ENTRYPOINT ["/bin/bash"]
