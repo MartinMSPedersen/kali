@@ -26,7 +26,8 @@ RUN apt-get install --yes metasploit-framework \
                        tmux \
                        hashcash \ 
                        sublist3r \
-		       bind9-dnsutils
+											 libgmp3-dev libmpc-dev \
+                       bind9-dnsutils
 RUN pip3 install pwn crypto selenium fabric
 RUN nmap --script-updatedb
 RUN ln -s /usr/share/wordlists/rockyou.txt.gz /rockyou.txt.gz
@@ -37,6 +38,10 @@ RUN searchsploit -u || true # 2GB
 
 RUN apt-get install --yes steghide zbar-tools
 RUN wget -O /usr/local/bin/LinEnum.sh https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
+
+RUN wget https://github.com/Ganapati/RsaCtfTool/archive/refs/heads/master.zip &&
+    unzip master.zip && rm master.zip &&
+    cd RsaCtfTool && pip3 install -r "requirements.txt" && mv RsaCtfTool /usr/local
 
 RUN apt-get -y autoremove && updatedb
 # https://github.com/internetwache/GitTools/archive/refs/heads/master.zip
