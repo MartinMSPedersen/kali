@@ -39,9 +39,9 @@ RUN searchsploit -u || true # 2GB
 RUN apt-get install --yes steghide zbar-tools
 RUN wget -O /usr/local/bin/LinEnum.sh https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 
-RUN wget https://github.com/Ganapati/RsaCtfTool/archive/refs/heads/master.zip &&  \
-    unzip master.zip && rm master.zip && cd RsaCtfTool && \
-		pip3 install -r "requirements.txt" && mv RsaCtfTool /usr/local
+#RUN wget https://github.com/Ganapati/RsaCtfTool/archive/refs/heads/master.zip &&  \
+#    unzip master.zip && rm master.zip && cd RsaCtfTool && \
+#		pip3 install -r "requirements.txt" && mv RsaCtfTool /usr/local
 
 RUN apt-get -y autoremove && updatedb
 # https://github.com/internetwache/GitTools/archive/refs/heads/master.zip
