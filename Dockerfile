@@ -26,7 +26,7 @@ RUN apt-get install --yes metasploit-framework \
                        tmux \
                        hashcash \ 
                        sublist3r \
-											 libgmp3-dev libmpc-dev \
+		       libgmp3-dev libmpc-dev \
                        bind9-dnsutils
 RUN pip3 install pwn crypto selenium fabric
 RUN nmap --script-updatedb
