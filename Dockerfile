@@ -26,8 +26,10 @@ RUN apt-get install --yes metasploit-framework \
                        tmux \
                        hashcash \ 
                        sublist3r \
-		       libgmp3-dev libmpc-dev \
-                       bind9-dnsutils
+		                   libgmp3-dev libmpc-dev \
+                       bind9-dnsutils \
+                       sagemath sagemath-common sagemath-database-conway-polynomials sagemath-database-elliptic-curves \
+                       sagemath-database-graphs sagemath-database-mutually-combinatorial-designs sagemath-database-polytopes
 RUN pip3 install pwn crypto selenium fabric
 RUN nmap --script-updatedb
 RUN ln -s /usr/share/wordlists/rockyou.txt.gz /rockyou.txt.gz
