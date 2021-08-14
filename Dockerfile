@@ -24,9 +24,9 @@ RUN apt-get install --yes metasploit-framework \
                        wfuzz \
                        qpdf \
                        tmux \
-                       hashcash \ 
+                       hashcash \
                        sublist3r \
-		                   libgmp3-dev libmpc-dev \
+                       libgmp3-dev libmpc-dev \
                        bind9-dnsutils \
                        sagemath sagemath-common sagemath-database-conway-polynomials sagemath-database-elliptic-curves \
                        sagemath-database-graphs sagemath-database-mutually-combinatorial-designs sagemath-database-polytopes
@@ -45,7 +45,7 @@ RUN pip3 install sympy
 
 #RUN wget https://github.com/Ganapati/RsaCtfTool/archive/refs/heads/master.zip &&  \
 #    unzip master.zip && rm master.zip && cd RsaCtfTool && \
-#		pip3 install -r "requirements.txt" && mv RsaCtfTool /usr/local
+#               pip3 install -r "requirements.txt" && mv RsaCtfTool /usr/local
 
 RUN apt-get -y autoremove && updatedb
 # https://github.com/internetwache/GitTools/archive/refs/heads/master.zip
