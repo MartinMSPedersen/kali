@@ -47,6 +47,7 @@ RUN pip3 install sympy
 #    unzip master.zip && rm master.zip && cd RsaCtfTool && \
 #               pip3 install -r "requirements.txt" && mv RsaCtfTool /usr/local
 
+RUN apt install wordlists --reinstall # why is this missing
 RUN apt-get -y autoremove && updatedb
 # https://github.com/internetwache/GitTools/archive/refs/heads/master.zip
 
