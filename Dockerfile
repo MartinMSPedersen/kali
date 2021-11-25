@@ -27,7 +27,8 @@ RUN apt-get install --yes metasploit-framework \
                        hashcash \
                        sublist3r \
                        libgmp3-dev libmpc-dev \
-                       bind9-dnsutils
+                       bind9-dnsutils \
+                       lynx
 #                       sagemath sagemath-common sagemath-database-conway-polynomials sagemath-database-elliptic-curves \
 #                       sagemath-database-graphs sagemath-database-mutually-combinatorial-designs sagemath-database-polytopes
 RUN pip3 install pwn pycrypto selenium fabric
