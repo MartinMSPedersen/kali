@@ -5,20 +5,14 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 RUN apt-get update && apt-get upgrade --yes --force-yes
 RUN apt-get install --yes apt-utils
-RUN apt-get install --yes metasploit-framework \
-                       kali-tools-passwords \
-                       kali-tools-reverse-engineering \
-                       kali-tools-exploitation \
-                       kali-tools-post-exploitation \
-                       kali-tools-forensics \
-                       kali-tools-information-gathering \
+RUN apt-get install --yes \
+                       dirb \
+                       mc \
                        gobuster \
                        mlocate \
                        python3-pip \
                        python-tk \
                        libimage-exiftool-perl \
-                       dirb \
-                       mc \
                        vim vim-common vim-doc vim-scripts vim-doc \
                        whois \
                        wfuzz \
@@ -29,6 +23,14 @@ RUN apt-get install --yes metasploit-framework \
                        libgmp3-dev libmpc-dev \
                        bind9-dnsutils \
                        lynx
+RUN apt-get install --yes metasploit-framework
+RUN apt-get install --yes kali-tools-passwords
+RUN apt-get install --yes kali-tools-reverse-engineering
+RUN apt-get install --yes kali-tools-exploitation
+RUN apt-get install --yes kali-tools-post-exploitation
+RUN apt-get install --yes kali-tools-forensics
+RUN apt-get install --yes kali-tools-information-gathering
+                       
 #                       sagemath sagemath-common sagemath-database-conway-polynomials sagemath-database-elliptic-curves \
 #                       sagemath-database-graphs sagemath-database-mutually-combinatorial-designs sagemath-database-polytopes
 RUN pip3 install pwn pycrypto selenium fabric
