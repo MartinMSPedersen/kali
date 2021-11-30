@@ -51,7 +51,7 @@ RUN pip3 install sympy
 #               pip3 install -r "requirements.txt" && mv RsaCtfTool /usr/local
 
 RUN apt install wordlists --reinstall # why is this missing
-RUN apt-get install --yes mmls
+RUN apt-get install --yes forensics-all forensics-extra
 RUN apt-get -y autoremove && updatedb
 # https://github.com/internetwache/GitTools/archive/refs/heads/master.zip
 
