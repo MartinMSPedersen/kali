@@ -41,7 +41,7 @@ RUN apt-get install --yes iputils-ping telnet bloodhound sleuthkit
 
 RUN searchsploit -u || true # 2GB
 
-RUN apt-get install --yes steghide zbar-tools
+RUN apt-get install --yes steghide zbar-tools testdisk
 RUN wget -O /usr/local/bin/LinEnum.sh https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 
 RUN pip3 install sympy
