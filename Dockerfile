@@ -45,6 +45,8 @@ RUN apt-get install --yes steghide zbar-tools testdisk
 RUN wget -O /usr/local/bin/LinEnum.sh https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 
 RUN pip3 install sympy
+RUN wget -O xor.zip https://github.com/MartinMSPedersen/xor/archive/refs/heads/master.zip &&
+    unzip xor.zip && rm xor.zip && cd xor-master && make && mv xor /usr/local/bin && cd .. && rm -r xor-master
 
 #RUN wget https://github.com/Ganapati/RsaCtfTool/archive/refs/heads/master.zip &&  \
 #    unzip master.zip && rm master.zip && cd RsaCtfTool && \
