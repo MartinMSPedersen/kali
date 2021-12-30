@@ -56,5 +56,6 @@ RUN apt install wordlists --reinstall # why is this missing
 
 RUN apt-get -y autoremove && updatedb
 # https://github.com/internetwache/GitTools/archive/refs/heads/master.zip
+COPY bash-functions.sh /etc/profile.d/bash-functions.sh
 
 ENTRYPOINT ["/bin/bash"]
