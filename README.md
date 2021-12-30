@@ -3,5 +3,5 @@ More information about the image can be found here: https://hub.docker.com/r/mar
 
 ```bash
 docker pull martinmspedersen/kali
-docker container run --rm --network host --hostname kali --name kali-$$ -v "$PWD":/data -w /data -it martinmspedersen/kali:latest'
+docker container run --rm --network host --hostname kali --name kali-$$ -v "$PWD":/data -w /data -it martinmspedersen/kali:latest
 ```
