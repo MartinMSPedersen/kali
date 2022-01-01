@@ -56,5 +56,7 @@ RUN apt install wordlists --reinstall # why is this missing
 RUN apt-get -y autoremove && updatedb
 # https://github.com/internetwache/GitTools/archive/refs/heads/master.zip
 ADD https://raw.githubusercontent.com/MartinMSPedersen/kali/master/bash_functions.sh /etc/profile.d/bash-functions.sh
+RUN '/usr/bin/echo ". /etc/profile.d/bash-functions.sh" >> /etc/bash.bashrc'
+
 
 ENTRYPOINT ["/bin/bash"]
