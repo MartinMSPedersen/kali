@@ -18,7 +18,6 @@ RUN apt-get install --yes \
                        wfuzz \
                        qpdf \
                        tmux \
-                       hashcash \
                        sublist3r \
                        libgmp3-dev libmpc-dev \
                        bind9-dnsutils \
