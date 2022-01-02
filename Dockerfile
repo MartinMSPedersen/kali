@@ -56,5 +56,6 @@ RUN apt install wordlists --reinstall # why is this missing
 RUN apt-get -y autoremove && updatedb
 # https://github.com/internetwache/GitTools/archive/refs/heads/master.zip
 ADD https://raw.githubusercontent.com/MartinMSPedersen/kali/master/generate_password /usr/local/bin/
+RUN chmod +x /usr/local/bin/generate_password
 
 ENTRYPOINT ["/bin/bash"]
