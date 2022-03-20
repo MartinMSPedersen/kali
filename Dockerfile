@@ -29,7 +29,9 @@ RUN apt-get install --yes \
                        testdisk \
                        dos2unix \
                        zbar-tools \
-                       steghide
+                       steghide \
+                       ftp \
+                       ncftp
 RUN apt-get install --yes metasploit-framework
 RUN apt-get install --yes kali-tools-passwords
 RUN apt-get install --yes kali-tools-reverse-engineering
@@ -39,7 +41,7 @@ RUN apt-get install --yes kali-tools-forensics
 RUN apt-get install --yes kali-tools-information-gathering
 RUN pip3 install pwn pycrypto selenium fabric
 RUN nmap --script-updatedb
-RUN ln -s /usr/share/wordlists/rockyou.txt.gz /rockyou.txt.gz
+RUN gunzip /usr/share/wordlists/rockyou.txt.gz
 RUN wget https://github.com/n00py/WPForce/archive/master.zip && unzip master.zip && rm master.zip
 
 RUN searchsploit -u || true # 2GB
