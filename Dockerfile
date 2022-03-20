@@ -31,6 +31,7 @@ RUN apt-get install --yes \
                        zbar-tools \
                        steghide \
                        ftp \
+                       mariadb-client \
                        ncftp
 RUN apt-get install --yes metasploit-framework
 RUN apt-get install --yes kali-tools-passwords
