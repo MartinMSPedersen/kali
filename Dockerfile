@@ -15,6 +15,7 @@ RUN apt-get install --yes \
                        libimage-exiftool-perl \
                        vim vim-common vim-doc vim-scripts vim-doc \
                        whois \
+                       wabt \
                        wfuzz \
                        qpdf \
                        tmux \
