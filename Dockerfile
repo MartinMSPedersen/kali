@@ -56,7 +56,10 @@ RUN wget -O xor.zip https://github.com/MartinMSPedersen/xor/archive/refs/heads/m
 RUN apt install wordlists --reinstall # why is this missing
 
 ADD https://raw.githubusercontent.com/MartinMSPedersen/kali/master/generate_password /usr/local/bin/
-RUN chmod +x /usr/local/bin/generate_password
+ADD https://github.com/vi/websocat/releases/download/v1.10.0/websocat.x86_64-unknown-linux-musl /usr/local/bin/websocat
+
+RUN chmod +x /usr/local/bin/generate_password /usr/local/bin/websocat
+
 
 RUN apt-get -y autoremove && updatedb
 
