@@ -33,7 +33,8 @@ RUN apt-get install --yes \
                        steghide \
                        ftp \
                        mariadb-client \
-                       ncftp
+                       ncftp \
+                       john john-data 
 RUN apt-get install --yes metasploit-framework
 RUN apt-get install --yes kali-tools-passwords
 RUN apt-get install --yes kali-tools-reverse-engineering
