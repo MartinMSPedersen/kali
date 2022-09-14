@@ -64,5 +64,7 @@ RUN chmod +x /usr/local/bin/generate_password /usr/local/bin/websocat
 RUN apt-get install --yes redis-tools
 
 RUN apt-get -y autoremove && updatedb
+WORKDIR /src
+RUN git clone https://github.com/lgandx/Responder
 
 ENTRYPOINT ["/bin/bash"]
