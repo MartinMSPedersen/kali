@@ -61,6 +61,7 @@ ADD https://github.com/vi/websocat/releases/download/v1.10.0/websocat.x86_64-unk
 
 RUN chmod +x /usr/local/bin/generate_password /usr/local/bin/websocat
 
+RUN apt-get install --yes redis-tools
 
 RUN apt-get -y autoremove && updatedb
 
