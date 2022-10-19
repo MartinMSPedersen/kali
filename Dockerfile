@@ -66,6 +66,7 @@ RUN apt-get install --yes redis-tools awscli
 RUN apt-get -y autoremove && updatedb
 WORKDIR /src
 
-RUN pip install netiface && git clone https://github.com/lgandx/Responder 
+#RUN pip3 install netiface && git clone https://github.com/lgandx/Responder 
+RUN git clone https://github.com/lgandx/Responder 
 
 ENTRYPOINT ["/bin/bash"]
