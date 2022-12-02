@@ -67,5 +67,6 @@ RUN apt-get -y autoremove && updatedb
 WORKDIR /src
 
 RUN pip3 install netifaces && git clone https://github.com/lgandx/Responder 
+RUN pip3 install primePy
 
 ENTRYPOINT ["/bin/bash"]
