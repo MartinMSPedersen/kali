@@ -37,11 +37,9 @@ ADD https://github.com/vi/websocat/releases/download/v1.10.0/websocat.x86_64-unk
 RUN chmod +x /usr/local/bin/generate_password /usr/local/bin/websocat
 
 
-WORDIR /src
+WORKDIR /src
 RUN pip3 install netifaces && git clone https://github.com/lgandx/Responder 
 
 RUN apt-get -y autoremove && updatedb
-WORKDIR /src
-
 
 ENTRYPOINT ["/bin/bash"]
