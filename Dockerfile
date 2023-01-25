@@ -18,8 +18,7 @@ RUN apt-get install --yes dirb mc gobuster mlocate \
 					   metasploit-framework \
 					   kali-tools-passwords kali-tools-reverse-engineering \
 					   kali-tools-exploitation kali-tools-post-exploitation \
-                       kali-tools-forensics kali-tools-information-gathering \
-
+                       kali-tools-forensics kali-tools-information-gathering 
 RUN apt install wordlists --reinstall # why is this missing
 RUN pip3 install pwn pycrypto selenium fabric sympy primePy
 RUN nmap --script-updatedb
