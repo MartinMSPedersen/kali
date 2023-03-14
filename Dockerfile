@@ -37,7 +37,8 @@ RUN apt-get install --yes dirb mc gobuster mlocate \
 		       kali-tools-exploitation kali-tools-post-exploitation \
                        kali-tools-forensics kali-tools-information-gathering \
 		       wordlists
-RUN pip3 install pwn pycrypto selenium fabric sympy primePy netifaces
+#RUN pip3 install pwn pycrypto selenium fabric sympy primePy netifaces
+RUN pip3 install pwn selenium fabric sympy primePy netifaces
 RUN nmap --script-updatedb
 
 RUN gunzip /usr/share/wordlists/rockyou.txt.gz
@@ -58,5 +59,6 @@ ADD https://github.com/vi/websocat/releases/download/v1.10.0/websocat.x86_64-unk
 WORKDIR /src
 RUN git clone https://github.com/lgandx/Responder 
 RUN apt-get -y autoremove && updatedb
+
 
 ENTRYPOINT ["/bin/bash"]
