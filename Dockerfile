@@ -5,14 +5,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 RUN apt-get update && apt-get upgrade --yes --force-yes
 RUN apt-get install --yes apt-utils
-RUN apt-get install --yes \
-                       dirb \
-                       mc \
-                       gobuster \
-                       mlocate \
-                       python3-pip \
-                       python-tk \
-                       libimage-exiftool-perl \
+RUN apt-get install --yes dirb mc gobuster mlocate \
+                       python3-pip python-tk libimage-exiftool-perl \
                        vim vim-common vim-doc vim-scripts vim-doc \
                        whois \
                        wabt \
@@ -31,23 +25,19 @@ RUN apt-get install --yes \
                        dos2unix \
                        zbar-tools \
                        steghide \
-                       ftp \
-                       mariadb-client \
-                       ncftp \
-                       john john-data \
-		       awscli \
-		       redis-tools \
-		       wordlists \
-                       metasploit-framework \
-                       kali-tools-passwords \
-		       kali-tools-reverse-engineering \
-                       kali-tools-exploitation \
-                       kali-tools-post-exploitation \
-                       kali-tools-forensics \
-                       kali-tools-information-gathering
-
-RUN pip3 install pwn pycrypto selenium fabric primepy netifaces sympy
-
+                       whois wabt wfuzz qpdf tmux \
+                       sublist3r libgmp3-dev libmpc-dev \
+                       bind9-dnsutils lynx iputils-ping \
+                       telnet bloodhound sleuthkit \
+                       testdisk dos2unix zbar-tools steghide \
+                       ftp mariadb-client ncftp john john-data \
+  	  	       redis-tools rlwrap awscli \
+		       metasploit-framework \
+		       kali-tools-passwords kali-tools-reverse-engineering \
+		       kali-tools-exploitation kali-tools-post-exploitation \
+                       kali-tools-forensics kali-tools-information-gathering \
+		       wordlists
+RUN pip3 install pwn pycrypto selenium fabric sympy primePy netifaces
 RUN nmap --script-updatedb
 
 RUN gunzip /usr/share/wordlists/rockyou.txt.gz
@@ -67,7 +57,6 @@ ADD https://github.com/vi/websocat/releases/download/v1.10.0/websocat.x86_64-unk
 
 WORKDIR /src
 RUN git clone https://github.com/lgandx/Responder 
-
 RUN apt-get -y autoremove && updatedb
 
 ENTRYPOINT ["/bin/bash"]
