@@ -36,8 +36,9 @@ RUN apt-get install --yes dirb mc gobuster mlocate \
 		       kali-tools-passwords kali-tools-reverse-engineering \
 		       kali-tools-exploitation kali-tools-post-exploitation \
                        kali-tools-forensics kali-tools-information-gathering \
-		       wordlists
-#RUN pip3 install pwn pycrypto selenium fabric sympy primePy netifaces
+		       wordlists \
+ 	               python-cryptography
+
 RUN pip3 install pwn selenium fabric sympy primePy netifaces
 RUN nmap --script-updatedb
 
