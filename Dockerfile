@@ -52,9 +52,9 @@ RUN wget -O /usr/local/bin/LinEnum.sh https://raw.githubusercontent.com/rebootus
 RUN wget -O xor.zip https://github.com/MartinMSPedersen/xor/archive/refs/heads/master.zip && unzip xor.zip && rm xor.zip && cd xor-master && make && mv xor /usr/local/bin && cd .. && rm -r xor-master
 
 ADD https://raw.githubusercontent.com/MartinMSPedersen/kali/master/generate_password /usr/local/bin/
+ADD https://github.com/vi/websocat/releases/download/v1.10.0/websocat.x86_64-unknown-linux-musl /usr/local/bin/websocat
 RUN chmod +x /usr/local/bin/generate_password /usr/local/bin/websocat
 
-ADD https://github.com/vi/websocat/releases/download/v1.10.0/websocat.x86_64-unknown-linux-musl /usr/local/bin/websocat
 
 WORKDIR /src
 RUN git clone https://github.com/lgandx/Responder 
