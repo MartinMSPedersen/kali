@@ -10,6 +10,7 @@ RUN apt-get install --yes dirb mc gobuster mlocate \
                        vim vim-common vim-doc vim-scripts vim-doc \
                        whois \
                        wabt \
+                       ffuf \
                        wfuzz \
                        qpdf \
                        tmux \
