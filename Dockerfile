@@ -26,6 +26,7 @@ RUN apt-get install --yes dirb mc gobuster mlocate \
                        dos2unix \
                        zbar-tools \
                        steghide \
+                       mongodb \
                        whois wabt wfuzz qpdf tmux \
                        sublist3r libgmp3-dev libmpc-dev \
                        bind9-dnsutils lynx iputils-ping \
