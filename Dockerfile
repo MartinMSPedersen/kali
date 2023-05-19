@@ -40,7 +40,7 @@ RUN apt-get install --yes dirb mc gobuster mlocate \
                        kali-tools-forensics kali-tools-information-gathering \
 		       wordlists python3-cryptography
 
-RUN pip3 install pwn selenium fabric sympy primePy netifaces
+RUN pip3 install pwn selenium fabric sympy primePy netifaces telnetlib3
 RUN nmap --script-updatedb
 
 RUN gunzip /usr/share/wordlists/rockyou.txt.gz
