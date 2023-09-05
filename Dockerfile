@@ -5,7 +5,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 RUN apt-get update && apt-get upgrade --yes --force-yes
 RUN apt-get install --yes apt-utils
-RUN apt-get install --yes dirb mc gobuster mlocate \
+RUN apt-get install --yes dirb mc gobuster \
                        python3-pip python-tk libimage-exiftool-perl \
                        vim vim-common vim-doc vim-scripts vim-doc \
                        whois \
@@ -60,7 +60,7 @@ RUN chmod +x /usr/local/bin/generate_password /usr/local/bin/websocat
 
 WORKDIR /src
 RUN git clone https://github.com/lgandx/Responder 
-RUN apt-get -y autoremove && updatedb
+RUN apt-get -y autoremove # && updatedb
 
 
 ENTRYPOINT ["/bin/bash"]
