@@ -9,6 +9,7 @@ RUN apt-get install --yes dirb mc gobuster \
                        python3-pip python-tk libimage-exiftool-perl \
                        vim vim-common vim-doc vim-scripts vim-doc \
                        whois \
+                       rsync \
                        wabt \
                        ffuf \
                        wfuzz \
