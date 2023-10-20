@@ -59,7 +59,7 @@ ADD https://raw.githubusercontent.com/MartinMSPedersen/kali/master/generate_pass
 ADD https://github.com/vi/websocat/releases/download/v1.10.0/websocat.x86_64-unknown-linux-musl /usr/local/bin/websocat
 RUN chmod +x /usr/local/bin/generate_password /usr/local/bin/websocat
 
-RUN apt-get install tldr && mkdir /root/.local/share/tldr && tldr --update
+RUN apt-get install tldr && mkdir -p /root/.local/share/tldr && tldr --update
 
 WORKDIR /src
 RUN git clone https://github.com/lgandx/Responder 
