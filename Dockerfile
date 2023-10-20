@@ -10,6 +10,7 @@ RUN apt-get install --yes dirb mc gobuster \
                        ninja-build cmake \
                        vim vim-common vim-doc vim-scripts vim-doc \
                        whois \
+                       wimtools \
                        rsync \
                        wabt \
                        ffuf \
