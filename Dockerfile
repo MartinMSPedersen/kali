@@ -39,11 +39,11 @@ RUN apt-get install --yes dirb mc gobuster \
                        testdisk dos2unix zbar-tools steghide \
                        ftp mariadb-client ncftp john john-data \
   	  	       redis-tools rlwrap awscli \
-		       metasploit-framework \
-		       kali-tools-passwords kali-tools-reverse-engineering \
-		       kali-tools-exploitation kali-tools-post-exploitation \
-                       kali-tools-forensics kali-tools-information-gathering \
 		       wordlists python3-cryptography
+		       #metasploit-framework \
+		       #kali-tools-passwords kali-tools-reverse-engineering \
+		       #kali-tools-exploitation kali-tools-post-exploitation \
+               #        kali-tools-forensics kali-tools-information-gathering \
 
 RUN pip3 install pwn selenium fabric sympy primePy netifaces telnetlib3 decompyle3 pwntools uncompyle6
 RUN nmap --script-updatedb
