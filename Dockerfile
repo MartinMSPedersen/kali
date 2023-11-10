@@ -21,6 +21,7 @@ RUN apt-get install --yes dirb mc gobuster \
                        sublist3r \
                        libgmp3-dev libmpc-dev \
                        bind9-dnsutils \
+                       plocate \
                        lynx \
                        iputils-ping \
                        telnet \
