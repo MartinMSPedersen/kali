@@ -9,7 +9,7 @@ RUN apt-get install --yes dirb mc gobuster \
                        python3-pip python-tk libimage-exiftool-perl \
                        ninja-build cmake \
                        vim vim-common vim-doc \
-                       neovim niversal-ctags \
+                       neovim universal-ctags \
                        whois \
                        wimtools \
                        rsync \
