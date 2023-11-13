@@ -46,7 +46,8 @@ RUN apt-get install --yes dirb mc gobuster \
                #        kali-tools-forensics kali-tools-information-gathering \
 
 #RUN pip3 install pwn selenium fabric sympy primePy netifaces telnetlib3 decompyle3 pwntools uncompyle6
-RUN pip3 install pwn selenium fabric sympy primePy netifaces telnetlib3 decompyle3 uncompyle6
+#RUN pip3 install pwn selenium fabric sympy primePy netifaces telnetlib3 decompyle3 uncompyle6
+
 RUN nmap --script-updatedb
 
 RUN gunzip /usr/share/wordlists/rockyou.txt.gz
