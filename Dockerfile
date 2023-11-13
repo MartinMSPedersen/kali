@@ -9,7 +9,7 @@ RUN apt-get install --yes dirb mc gobuster \
                        python3-pip python-tk libimage-exiftool-perl \
                        ninja-build cmake \
                        vim vim-common vim-doc \
-                       neovim niversal-ctags \
+                       neovim universal-ctags \
                        whois \
                        wimtools \
                        rsync \
@@ -21,6 +21,7 @@ RUN apt-get install --yes dirb mc gobuster \
                        sublist3r \
                        libgmp3-dev libmpc-dev \
                        bind9-dnsutils \
+                       plocate \
                        lynx \
                        iputils-ping \
                        telnet \
@@ -38,11 +39,11 @@ RUN apt-get install --yes dirb mc gobuster \
                        testdisk dos2unix zbar-tools steghide \
                        ftp mariadb-client ncftp john john-data \
   	  	       redis-tools rlwrap awscli \
-		       metasploit-framework \
-		       kali-tools-passwords kali-tools-reverse-engineering \
-		       kali-tools-exploitation kali-tools-post-exploitation \
-                       kali-tools-forensics kali-tools-information-gathering \
 		       wordlists python3-cryptography
+		       #metasploit-framework \
+		       #kali-tools-passwords kali-tools-reverse-engineering \
+		       #kali-tools-exploitation kali-tools-post-exploitation \
+               #        kali-tools-forensics kali-tools-information-gathering \
 
 #RUN pip3 install pwn selenium fabric sympy primePy netifaces telnetlib3 decompyle3 pwntools uncompyle6
 RUN pip3 install pwn selenium fabric sympy primePy netifaces telnetlib3 decompyle3 uncompyle6
