@@ -32,6 +32,7 @@ RUN apt-get install --yes dirb mc gobuster \
                        zbar-tools \
                        steghide \
                        mongodb \
+                       nmap \
                        whois wabt wfuzz qpdf tmux \
                        sublist3r libgmp3-dev libmpc-dev \
                        bind9-dnsutils lynx iputils-ping \
