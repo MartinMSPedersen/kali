@@ -41,8 +41,8 @@ RUN apt-get install --yes dirb mc gobuster \
                        ftp mariadb-client ncftp john john-data \
   	  	       redis-tools rlwrap awscli \
 		       wordlists python3-cryptography
-		       #metasploit-framework \
-		       #kali-tools-passwords kali-tools-reverse-engineering \
+		       metasploit-framework \
+		       kali-tools-passwords kali-tools-reverse-engineering \
 		       #kali-tools-exploitation kali-tools-post-exploitation \
                #        kali-tools-forensics kali-tools-information-gathering \
 
