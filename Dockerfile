@@ -69,7 +69,7 @@ RUN apt-get install tldr && mkdir -p /root/.local/share/tldr && tldr --update
 
 WORKDIR /src
 RUN git clone https://github.com/lgandx/Responder 
-RUN apt-get -y autoremove # && updatedb
+RUN apt-get -y autoremove  && updatedb
 
 
 ENTRYPOINT ["/bin/bash"]
