@@ -40,7 +40,7 @@ RUN apt-get install --yes dirb mc gobuster \
                        testdisk dos2unix zbar-tools steghide \
                        ftp mariadb-client ncftp john john-data \
   	  	       redis-tools rlwrap awscli \
-		       wordlists python3-cryptography
+		       wordlists python3-cryptography \
 		       metasploit-framework \
 		       kali-tools-passwords kali-tools-reverse-engineering \
 		       #kali-tools-exploitation kali-tools-post-exploitation \
