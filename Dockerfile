@@ -42,7 +42,7 @@ RUN apt-get install --yes dirb mc gobuster \
   	  	       redis-tools rlwrap awscli \
 		       wordlists python3-cryptography \
 		       metasploit-framework \
-		       kali-tools-passwords kali-tools-reverse-engineering \
+		       kali-tools-passwords kali-tools-reverse-engineering 
 		       #kali-tools-exploitation kali-tools-post-exploitation \
                #        kali-tools-forensics kali-tools-information-gathering \
 
