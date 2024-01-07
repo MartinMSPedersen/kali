@@ -4,6 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 #RUN apt-get update && apt-get upgrade --yes --force-yes
+RUN apt-get update
 #RUN apt-get install --yes apt-utils
 RUN apt-get install --yes dirb mc gobuster \
                        python3-pip python-tk libimage-exiftool-perl \
